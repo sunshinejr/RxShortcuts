@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'RxShortcuts_Example' do
+  pod 'RxShortcuts', :path => '../'
+
+  target 'RxShortcuts_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
