@@ -5,7 +5,7 @@
 [![License](https://img.shields.io/cocoapods/l/RxShortcuts.svg?style=flat)](http://cocoapods.org/pods/RxShortcuts)
 [![Platform](https://img.shields.io/cocoapods/p/RxShortcuts.svg?style=flat)](http://cocoapods.org/pods/RxShortcuts)
 
-Shortcuts for [RxSwift/RxCocoa](https://github.com/ReactiveX/RxSwift).<br />
+Shortcuts for [RxSwift/RxCocoa](https://github.com/ReactiveX/RxSwift).<br /><br />
 **Warning** Since `RxSwift` 3.0.0 (and Swift 3.0), shortcuts like `subscribeNext`,
 `doOnNext` etc. have been removed from the core library. There was a reason for
 that and let me quote [@kzaher](https://github.com/kzaher) about the shortcuts
