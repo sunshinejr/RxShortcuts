@@ -1,28 +1,71 @@
 # RxShortcuts
 
-[![CI Status](http://img.shields.io/travis/Łukasz Mróz/RxShortcuts.svg?style=flat)](https://travis-ci.org/Łukasz Mróz/RxShortcuts)
-[![Version](https://img.shields.io/cocoapods/v/RxShortcuts.svg?style=flat)](http://cocoapods.org/pods/RxShortcuts)
+[![CocoaPods](https://img.shields.io/cocoapods/v/RxShortcuts.svg)](https://github.com/sunshinejr/RxShortcuts)
+![Swift 3.0.x](https://img.shields.io/badge/Swift-3.0.x-orange.svg)
 [![License](https://img.shields.io/cocoapods/l/RxShortcuts.svg?style=flat)](http://cocoapods.org/pods/RxShortcuts)
 [![Platform](https://img.shields.io/cocoapods/p/RxShortcuts.svg?style=flat)](http://cocoapods.org/pods/RxShortcuts)
 
+Shortcuts for [RxSwift/RxCocoa](https://github.com/ReactiveX/RxSwift).
+*Warning* Since `RxSwift` 3.0.0 (and Swift 3.0), shortcuts like `subscribeNext`,
+`doOnNext` etc. have been removed from the core library. There was a reason for
+that and let me quote @kzaher about the shortcuts (old extensions):
+
+> The downsides of old extensions were inconsistencies with Swift API guidelines.
+> They also weren't expressing that calling them actually performes additional
+> subscriptions and thus potentially additional work beside just registering
+> observers.
+
+However I really like the shortcuts and I'm using them in my projects anyways,
+so I though that I could share.
+
+# Shortcuts
+
+List of available shortcuts for RxSwift:
+```swift
+subscribeNext(_:)
+subscribeError(_:)
+subscribeCompleted(_:)
+
+doOnNext(_:)
+doOnError:(_:)
+doOnCompleted(_:)
+```
+
+List of available shortcuts for RxCocoa (and `Driver`):
+```swift
+driveNext(_:)
+driveCompleted(_:)
+
+doOnNext(_:)
+doOnCompleted(_:)
+```
+
+If you think that there should be more, please make an Issue or Pull Request.
+
 ## Example
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+To run the example project, clone the repo, and run `pod install` from the
+Example directory first.
 
 ## Requirements
 
+- RxSwift ~> 3.0.0
+
 ## Installation
 
-RxShortcuts is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
-
+If you want the shortcuts only for `RxSwift`, add the following line to Podfile:
 ```ruby
 pod "RxShortcuts"
 ```
 
+If you want the shortcuts for both `RxSwift` and `RxCocoa`, then add this line:
+```ruby
+pod "RxShortcuts/RxCocoa"
+```
+
 ## Author
 
-Łukasz Mróz, lukasz.mroz@droidsonroids.pl
+Sunshinejr, thesunshinejr@gmail.com, <a href="https://twitter.com/thesunshinejr">@thesunshinejr</a>
 
 ## License
 
