@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  RxShortcuts
 //
-//  Created by Łukasz Mróz on 11/13/2016.
-//  Copyright (c) 2016 Łukasz Mróz. All rights reserved.
+//  Created by sunshinejr on 11/13/2016.
+//  Copyright (c) 2016 sunshinejr. All rights reserved.
 //
 
 import UIKit

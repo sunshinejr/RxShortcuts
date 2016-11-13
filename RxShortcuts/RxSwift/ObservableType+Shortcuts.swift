@@ -1,14 +1,14 @@
 //
 //  ObservableType+Shortcuts.swift
-//  Pods
+//  RxShortcuts
 //
-//  Created by Lukasz Mroz on 13.11.2016.
-//
+//  Created by sunshinejr on 11/13/2016.
+//  Copyright (c) 2016 sunshinejr. All rights reserved.
 //
 
 import RxSwift
 
-extension ObservableType {
+public extension ObservableType {
     
     /**
      Invokes an action for each Next event in the observable sequence, and propagates all observer messages through the result sequence.

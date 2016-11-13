@@ -1,14 +1,15 @@
 //
 //  SharedSequenceConvertibleType+Shortcuts.swift
-//  Pods
+//  RxShortcuts
 //
-//  Created by Lukasz Mroz on 13.11.2016.
-//
+//  Created by sunshinejr on 11/13/2016.
+//  Copyright (c) 2016 sunshinejr. All rights reserved.
 //
 
+import RxSwift
 import RxCocoa
 
-extension SharedSequenceConvertibleType where SharingStrategy == DriverSharingStrategy {
+public extension SharedSequenceConvertibleType where SharingStrategy == DriverSharingStrategy {
     
     /**
      Invokes an action for each Next event in the observable sequence, and propagates all observer messages through the result sequence.
@@ -41,5 +42,16 @@ extension SharedSequenceConvertibleType where SharingStrategy == DriverSharingSt
     // @warn_unused_result(message: "http://git.io/rxs.ud")
     public func driveNext(_ onNext: @escaping (E) -> Void) -> Disposable {
         return self.drive(onNext: onNext)
+    }
+    
+    /**
+     Subscribes a completion handler to an observable sequence.
+     
+     - parameter onCompleted: Action to invoke upon graceful termination of the observable sequence.
+     - returns: Subscription object used to unsubscribe from the observable sequence.
+     */
+    // @warn_unused_result(message: "http://git.io/rxs.ud")
+    public func driveCompleted(_ onCompleted: @escaping () -> Void) -> Disposable {
+        return self.drive(onCompleted: onCompleted)
     }
 }
