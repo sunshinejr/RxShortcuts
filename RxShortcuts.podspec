@@ -1,42 +1,28 @@
-#
-# Be sure to run `pod lib lint RxShortcuts.podspec' to ensure this is a
-# valid spec before submitting.
-#
-# Any lines starting with a # are optional, but their use is encouraged
-# To learn more about a Podspec see http://guides.cocoapods.org/syntax/podspec.html
-#
-
 Pod::Spec.new do |s|
   s.name             = 'RxShortcuts'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of RxShortcuts.'
+  s.summary          = 'RxSwift/RxCocoa shortcuts. subscribeNext, doOnNext and more.'
+  s.description      = <<-EOS
+  Shortcuts for [RxSwift/RxCocoa](https://github.com/ReactiveX/RxSwift).
+  EOS
 
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
-
-  s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
-
-  s.homepage         = 'https://github.com/<GITHUB_USERNAME>/RxShortcuts'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+  s.homepage         = 'https://github.com/sunshinejr/RxShortcuts'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Łukasz Mróz' => 'lukasz.mroz@droidsonroids.pl' }
-  s.source           = { :git => 'https://github.com/<GITHUB_USERNAME>/RxShortcuts.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.author           = { 'Łukasz Mróz' => 'thesunshinejr@gmail.com' }
+  s.source           = { :git => 'https://github.com/sunshinejr/RxShortcuts.git', :tag => s.version.to_s }
+  s.social_media_url = 'https://twitter.com/thesunshinejr'
 
   s.ios.deployment_target = '8.0'
+  s.default_subspec = "Core"
 
-  s.source_files = 'RxShortcuts/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'RxShortcuts' => ['RxShortcuts/Assets/*.png']
-  # }
+  s.subspec "Core" do |ss|
+    ss.source_files = "RxShortcuts/RxSwift/*.swift"
+    ss.dependency "RxSwift", "~> 3.0.0"
+  end
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.subspec "RxCocoa" do |ss|
+    ss.source_files = "RxShortcuts/RxCocoa/*.swift"
+    ss.dependency "RxShortcuts/Core"
+    ss.dependency "RxCocoa", "~> 3.0.0"
+  end
 end
