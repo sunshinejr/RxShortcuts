@@ -5,33 +5,34 @@
 [![License](https://img.shields.io/cocoapods/l/RxShortcuts.svg?style=flat)](http://cocoapods.org/pods/RxShortcuts)
 [![Platform](https://img.shields.io/cocoapods/p/RxShortcuts.svg?style=flat)](http://cocoapods.org/pods/RxShortcuts)
 
-Shortcuts for [RxSwift/RxCocoa](https://github.com/ReactiveX/RxSwift).
-*Warning* Since `RxSwift` 3.0.0 (and Swift 3.0), shortcuts like `subscribeNext`,
+Shortcuts for [RxSwift/RxCocoa](https://github.com/ReactiveX/RxSwift).<br />
+**Warning** Since `RxSwift` 3.0.0 (and Swift 3.0), shortcuts like `subscribeNext`,
 `doOnNext` etc. have been removed from the core library. There was a reason for
-that and let me quote @kzaher about the shortcuts (old extensions):
+that and let me quote [@kzaher](https://github.com/kzaher) about the shortcuts
+(old extensions):
 
 > The downsides of old extensions were inconsistencies with Swift API guidelines.
 > They also weren't expressing that calling them actually performes additional
 > subscriptions and thus potentially additional work beside just registering
 > observers.
 
-However I really like the shortcuts and I'm using them in my projects anyways,
-so I though that I could share.
+However I really like these shortcuts and I'm using them in my projects anyways,
+so I though that I would share.
 
 # Shortcuts
 
-List of available shortcuts for RxSwift:
+List of available shortcuts for `RxSwift`:
 ```swift
 subscribeNext(_:)
 subscribeError(_:)
 subscribeCompleted(_:)
 
 doOnNext(_:)
-doOnError:(_:)
+doOnError(_:)
 doOnCompleted(_:)
 ```
 
-List of available shortcuts for RxCocoa (and `Driver`):
+List of available shortcuts for `RxCocoa` (and `Driver`):
 ```swift
 driveNext(_:)
 driveCompleted(_:)
@@ -40,7 +41,8 @@ doOnNext(_:)
 doOnCompleted(_:)
 ```
 
-If you think that there should be more, please make an Issue or Pull Request.
+If you think that there should be more, please make an
+[Issue](https://github.com/sunshinejr/RxShortcuts/issues/new) or [Pull Request](https://github.com/sunshinejr/RxShortcuts/compare).
 
 ## Example
 
@@ -49,7 +51,7 @@ Example directory first.
 
 ## Requirements
 
-- RxSwift ~> 3.0.0
+- `RxSwift` ~> 3.0.0
 
 ## Installation
 
