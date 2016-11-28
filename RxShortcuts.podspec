@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'RxShortcuts'
-  s.version          = '0.1.0'
+  s.version          = '0.2.0'
   s.summary          = 'RxSwift/RxCocoa shortcuts. subscribeNext, doOnNext and more.'
   s.description      = <<-EOS
   Shortcuts for [RxSwift/RxCocoa](https://github.com/ReactiveX/RxSwift).
