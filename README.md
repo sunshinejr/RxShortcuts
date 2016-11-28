@@ -30,6 +30,11 @@ subscribeCompleted(_:)
 doOnNext(_:)
 doOnError(_:)
 doOnCompleted(_:)
+
+[Observable.just(1)].merge()
+[Observable.just(1)].concat()
+[Observable.just(1)].zip(_:)
+[Observable.just(1)].combineLatest(_:)
 ```
 
 List of available shortcuts for `RxCocoa` (and `Driver`):
