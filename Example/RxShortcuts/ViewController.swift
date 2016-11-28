@@ -22,6 +22,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Observable shortcuts
+        // ====================
+        
         let driverSequence = Driver<Int>.of(5, 6, 7, 8)
         let sequence = Observable<Int>.of(1, 2, 3, 4)
         let errorSequence = Observable<Int>.error(TestError.test)
@@ -70,6 +73,13 @@ class ViewController: UIViewController {
                 print("subscribeError")
             }
             .addDisposableTo(disposeBag)
+        
+        // Collection shortcuts
+        // ====================
+        let collectionSequence = [Observable.just(1), Observable.just(2)]
+        let mergeSequence = collectionSequence.merge()
+        let concatSequence = collectionSequence.concat()
+        let zipSequence = collectionSequence.zip { $0 }
+        let combineSequence = collectionSequence.combineLatest { $0 }
     }
 }
-
