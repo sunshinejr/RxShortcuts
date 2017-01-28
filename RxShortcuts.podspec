@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'RxShortcuts'
-  s.version          = '0.2.0'
+  s.version          = '0.3.0'
   s.summary          = 'RxSwift/RxCocoa shortcuts. subscribeNext, doOnNext and more.'
   s.description      = <<-EOS
   Shortcuts for [RxSwift/RxCocoa](https://github.com/ReactiveX/RxSwift).
@@ -17,12 +17,12 @@ Pod::Spec.new do |s|
 
   s.subspec "Core" do |ss|
     ss.source_files = "RxShortcuts/RxSwift/*.swift"
-    ss.dependency "RxSwift", "~> 3.0.0"
+    ss.dependency "RxSwift", "~> 3.0"
   end
 
   s.subspec "RxCocoa" do |ss|
     ss.source_files = "RxShortcuts/RxCocoa/*.swift"
     ss.dependency "RxShortcuts/Core"
-    ss.dependency "RxCocoa", "~> 3.0.0"
+    ss.dependency "RxCocoa", "~> 3.0"
   end
 end

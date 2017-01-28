@@ -1,12 +1,12 @@
 PODS:
-  - RxCocoa (3.0.1):
+  - RxCocoa (3.1.0):
+    - RxSwift (~> 3.1)
+  - RxShortcuts/Core (0.3.0):
     - RxSwift (~> 3.0)
-  - RxShortcuts/Core (0.1.0):
-    - RxSwift (~> 3.0.0)
-  - RxShortcuts/RxCocoa (0.1.0):
-    - RxCocoa (~> 3.0.0)
+  - RxShortcuts/RxCocoa (0.3.0):
+    - RxCocoa (~> 3.0)
     - RxShortcuts/Core
-  - RxSwift (3.0.1)
+  - RxSwift (3.1.0)
 
 DEPENDENCIES:
   - RxShortcuts/RxCocoa (from `../`)
@@ -16,9 +16,9 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  RxCocoa: 15a52fc590dcc700cb4a690a633b5c5184ce3a78
-  RxShortcuts: 688e91a0d1412aae9200869026d3fabfa3879b70
-  RxSwift: af5680055c4ad04480189c52d28385b1029493a6
+  RxCocoa: 50d7564866da9299161e86a263ce12a0873904d8
+  RxShortcuts: 38e659fa0768da436e87fcf13f52a7c87dafa4be
+  RxSwift: 83ff553e7593fdfdcb2562933a64c0284dffdadc
 
 PODFILE CHECKSUM: a8da40a3f2a89f5826c920f0208e22c3144fb789
 
